@@ -1,0 +1,64 @@
+trigger:
+- main
+
+resources:
+- repo: self
+
+pool:
+  name: demo
+  demands:
+  - agent.name -equals demo
+
+stages:
+- stage: Build
+  displayName: Build
+  jobs:
+  - job: Build
+    displayName: Build
+    workspace:
+      clean: all
+    steps:
+    - task: SonarQubePrepare@6
+      inputs:
+        SonarQube: 'SonarQube'
+        scannerMode: 'Other'
+        extraProperties: |
+          # Additional properties that will be passed to the scanner, 
+          # Put one key=value per line, example:
+          # sonar.exclusions=**/*.bin
+          sonar.qualitygate.wait=true
+#    - task: SonarQubePublish@6
+#      inputs:
+#        pollingTimeoutSec: '300'
+#    - task: sonar-buildbreaker@8
+#      inputs:
+#        SonarQube: 'SonarQube'
+    - task: MavenAuthenticate@0
+      inputs:
+        artifactsFeeds: 'Maven'
+        mavenServiceConnections: 'Maven'
+    - task: Maven@4
+      inputs:
+        mavenPomFile: 'pom.xml'
+        goals: 'deploy sonar:sonar'
+        publishJUnitResults: false
+        javaHomeOption: 'JDKVersion'
+        mavenVersionOption: 'Default'
+        mavenAuthenticateFeed: false
+        effectivePomSkip: false
+        sonarQubeRunAnalysis: false
+- stage: Deployment
+  displayName: Deployment
+  dependsOn: Build
+  jobs:
+  - deployment: Deployment
+    environment: "dev"
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: none
+          - task: CmdLine@2
+            inputs:
+              script: |
+                scp -rv target/vprofile-v2-SNAPSHOT.war tomcat-admin@10.10.1.10:/opt/apache-tomcat/webapps/ROOT.war
