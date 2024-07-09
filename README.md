@@ -47,4 +47,30 @@ Now Run the Azure Pipeline (the azure-pipelines.yaml is used as provided with th
 ![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/557412fe-d2b4-42ea-a360-e48669f3787a)
 ![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/6212ee8d-5aff-4745-909f-5c58c5e494a1)
 ![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/58e762d9-d926-49c0-9c47-ef18f4ddd86c)
+![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/587cc681-cfd9-4c83-960e-971af6f15f65)
+When you click on the User for the first time it will get the values from MySQL Database and store it in Memcache, so that next time when you click on the same user it will provide the values from the Memcache itself.
 ![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/6dd652a4-5bd6-4e22-93d4-50b500abe37e)
+![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/40841517-74bc-44a6-9598-f1ffc528ddee)
+After running the Azure Pipeline the Screenshot for RabbitMQ, SonarQube, Azure Artifacts are as shown in the Screenshot below.
+![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/be460577-0c89-4ec2-94ab-af099d7c5d98)
+![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/eca1290b-5fc0-4c8d-949b-2497d6bd3e3b)
+![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/eb73b102-fde4-4ec4-8ee0-a3e3217ec9c1)
+![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/8208ba7c-7e63-41d0-8a1b-a5fd3d20d70b)
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+```
+Source Code:-  https://github.com/singhritesh85/Three-tier-WebApplication.git
+```
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+```
+Reference:-  https://github.com/logicopslab/vprofile-project.git
+```
