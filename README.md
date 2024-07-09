@@ -43,6 +43,8 @@ Create a database named as account in mysql and import the file db_backup.sql.
 I have created Service Connection for SonarQube and Azure Artifacsts as shown below.
 ![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/0f4bb3dc-2643-43de-a1d1-6c50f499190a)
 <br><br/>
+Passwordless Authentication is established between Azure DevOps agent and Tomcat Server (Backend Server).
+
 Now Run the Azure Pipeline (the azure-pipelines.yaml is used as provided with this repository). Create the URL using Public IP for Nginx server after providing an entry for the same in DNS Zone. Access the newly created URL and provide username admin_vp and password admin_vp. 
 ![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/557412fe-d2b4-42ea-a360-e48669f3787a)
 ![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/6212ee8d-5aff-4745-909f-5c58c5e494a1)
