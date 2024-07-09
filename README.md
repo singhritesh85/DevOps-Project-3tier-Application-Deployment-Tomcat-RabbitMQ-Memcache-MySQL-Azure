@@ -4,6 +4,7 @@ Architecture Diagram for three tier Application Deployment
 Using the Terraform Script present in this repository create the end-to-end Infrastructure.
 <br><br/>
 For RabbitMQ Installation and cluster creation followed below procedure.
+
 **Node-1 (rabbitmq-vm-1)**
 ![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/988cf50d-cf6f-4322-8d16-bce8f02ab3d7)
 ![image](https://github.com/singhritesh85/DevOps-Project-3tier-Application-Deployment-Tomcat-RabbitMQ-Memcache-MySQL-Azure/assets/56765895/84cfa12b-a310-4bfc-a67f-a07d949edbe6)
